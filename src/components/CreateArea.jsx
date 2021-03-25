@@ -58,13 +58,12 @@ function CreateArea(props) {
           placeholder="Take a note..."
           rows={check ? "3" : "1"}
         />
-        {check ? (
-          <Zoom in={true}>
-            <Fab onClick={submitNote}>
-              <AddIcon />
-            </Fab>
-          </Zoom>
-        ) : null}
+
+        <Zoom in={check}>
+          <Fab onClick={submitNote}>
+            <AddIcon />
+          </Fab>
+        </Zoom>
       </form>
     </div>
   );
